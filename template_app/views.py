@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'template_app/index.html')
+    context_dict = {'text': "Hello World"}
+    return render(request, 'template_app/index.html', context=context_dict)
 
 
 def second_page(request):
